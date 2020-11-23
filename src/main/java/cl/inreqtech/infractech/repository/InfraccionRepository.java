@@ -11,5 +11,5 @@ public interface InfraccionRepository extends JpaRepository<InfraccionEntity, In
     @Query("SELECT IE FROM InfraccionEntity IE " +
             "INNER JOIN UsuarioEntity UE ON UE.id = IE.idUsuario " +
             "WHERE UE.rut = ?1")
-    public List<InfraccionEntity> findAllByRutUsuario(String rut);
+    List<InfraccionEntity> findAllByRutUsuario(String rut);
 }
